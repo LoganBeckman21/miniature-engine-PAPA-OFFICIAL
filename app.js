@@ -54,7 +54,7 @@ app.get('/read', async (req,res) => {
 
   res.render('index', {
     myTypeClient: myTypeServer,
-    myResultClient: myResultServer
+    
 
   });
 
