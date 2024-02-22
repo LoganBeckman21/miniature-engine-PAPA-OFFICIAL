@@ -44,11 +44,11 @@ async function run() {
 }
 //run().catch(console.dir);
 
-app.get('/read', async (req,res) => {
+//app.get('/read', async (req,res) => {
 
-  let myResultServer = await run(); 
+  //let myResultServer = await run(); 
 
-  console.log("myResultServer:", myResultServer[0].userName);
+  //console.log("myResultServer:", myResultServer[0].userName);
 
 
 
@@ -67,8 +67,10 @@ run().catch(console.dir);
 app.get('/', function(req, res) {
 
   res.render('index', {
-   
-    myTypeClient: myTypeServer 
+      let myResultServer = await run(); 
+
+      console.log("myResultServer:", myResultServer[0].userName);
+    //myTypeClient: myTypeServer 
 
   });
   
